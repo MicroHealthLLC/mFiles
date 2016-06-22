@@ -7,7 +7,7 @@ angular.module('config', []).value('config', {
 	'chunksPerBlock': 64,
     'emailServer':"http://localhost:8080",
 	'peerConfig': {
-        host: 'peer.microhealthllc.com',
+        host: '127.0.0.1',
 		path: '/signaling',
 		port: 9100,
 		key: 'mfiles',

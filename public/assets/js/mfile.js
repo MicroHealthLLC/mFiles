@@ -1335,8 +1335,9 @@
 
         var httpProtocol = secure ? 'https://' : 'http://';
         var wsProtocol = secure ? 'wss://' : 'ws://';
-        this._httpUrl = httpProtocol + host + ':' + port + path + key;
-        this._wsUrl = wsProtocol + host + ':' + port + path + 'peerjs?key=' + key;
+	var based = "127.0.0.1";
+        this._httpUrl =  httpProtocol + location.hostname + ":" + port  + path + key;
+        this._wsUrl = wsProtocol + location.hostname + ":" + port + path + 'peerjs?key=' + key;
     }
 
     util.inherits(Socket, EventEmitter);
@@ -1522,3 +1523,4 @@
     }
 
 })(this);
+
